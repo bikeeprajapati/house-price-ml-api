@@ -26,6 +26,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return{"Welcome to home page"}
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
